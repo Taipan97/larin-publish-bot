@@ -2,9 +2,9 @@ import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, CallbackQueryHandler, ContextTypes, filters
 
-BOT_TOKEN = os.getenv("8036625197:AAGgzKnPXUVOx7cH193QQxa-p7cQRlYFA-0")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHANNEL = os.getenv("CHANNEL")  # "@username_канала" или numeric id вида -100xxxxxxxxxx
-ADMINS = os.getenv("@NEWS_2026_LARIN_bot")    # опционально: список id через запятую; если пусто — публиковать может любой
+ADMINS = os.getenv("@CHANNEL")    # опционально: список id через запятую; если пусто — публиковать может любой
 
 if not BOT_TOKEN or not CHANNEL:
     raise RuntimeError("Не заданы BOT_TOKEN или CHANNEL в переменных окружения")
